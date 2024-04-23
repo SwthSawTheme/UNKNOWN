@@ -11,38 +11,38 @@ class Personagem(object):
         self.relacionamento = {None: 10}
     
             
-    def adicionarItem(self,item:str):
+    def addItem(self,item:str):
         return self.itens.append(item)
     
-    def verificarItens(self):
+    def getItens(self):
         return self.itens
     
-    def removerItem(self,item: str):
+    def removeItem(self,item: str):
         return self.itens.remove(item)
     
-    def alterarSanidade(self,valor:int):
+    def addSanidade(self,valor:int):
         self.sanidade += valor
     
-    def aumentarDinheiro(self,valor:float):
+    def addDinheiro(self,valor:float):
         self.dinheiro += valor
     
-    def verificarDinheiro(self):
+    def getDinheiro(self):
         return self.dinheiro
     
-    def diminuirDinheiro(self,valor:float):
+    def updateDinheiro(self,valor:float):
         self.dinheiro -= valor
     
-    def aumentarRelacionamento(self,player,valor:int):
+    def addRelacionamento(self,player,valor:int):
         if player.nome not in self.relacionamento:
             self.relacionamento[player.nome] = 10
         self.relacionamento[player.nome] += valor
     
-    def diminuirRelacionamento(self,player,valor: int):
+    def updateRelacionamento(self,player,valor: int):
         if player.nome not in self.relacionamento:
             self.relacionamento[player.nome] = 10
         self.relacionamento[player.nome] -= valor
     
-    def verificarRelacionamento(self,player):
+    def getRelacionamento(self,player):
         if player.nome in self.relacionamento:
             return self.relacionamento[player.nome]
         else:
@@ -53,8 +53,4 @@ if __name__ == "__main__":
     player = Personagem("Saw","homem")
     npc = Personagem("Julia","mulher")
     
-    npc.aumentarRelacionamento(player,1)
-    print(npc.nome)
-    print(npc.verificarRelacionamento(player))
-    print(player.nome)
-    print(player.verificarRelacionamento(npc))
+    
