@@ -1,13 +1,13 @@
 from saveSystem import *
 
-class EngineGame:
+class EngineGame(object):
     
     
     def __init__(self):
-        estado_jogo = str
-        ultima_acao = str
-        progresso_game = float
-        save_system = systemSave
+        self.estado_jogo = str
+        self.ultima_acao = str
+        self.progresso_game = float
+        self.save_system = str
         
     def startgame(self):
         pass
