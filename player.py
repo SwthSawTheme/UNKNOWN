@@ -47,7 +47,7 @@ class Player(object):
             return self.relacionamento[player.nome]
         else:
             return 0
-
+    
 
 if __name__ == "__main__":
     player = Player("Saw","homem")
