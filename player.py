@@ -1,5 +1,5 @@
 
-class Personagem(object):
+class Player(object):
     
     
     def __init__(self,nome,genero):
@@ -50,7 +50,7 @@ class Personagem(object):
 
 
 if __name__ == "__main__":
-    player = Personagem("Saw","homem")
-    npc = Personagem("Julia","mulher")
+    player = Player("Saw","homem")
+    npc = Player("Julia","mulher")
     
     
